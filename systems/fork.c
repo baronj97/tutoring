@@ -18,6 +18,8 @@ int main() {
         printf("PARENT (%u): Waiting for child to finish\n", getpid());
         wait(NULL);
         printf("PARENT(%u): Exiting\n", getpid());
+    } else {
+        printf("PARENT(%u): Not enough resources to fork!\n", getpid());
     }
 
     return 0;
