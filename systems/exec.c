@@ -13,7 +13,7 @@ int main() {
     char *prog = "ls";
     execlp(prog, prog, arg1, arg2, NULL);
 
-    /* execv and exexcp use a variadic array */
+    /* execv and execvp use a variadic array */
     char *args[] = {path, "-la", "/usr/lib", NULL};
     execv(path, args);
 
